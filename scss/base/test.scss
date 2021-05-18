@@ -1,0 +1,23 @@
+$background-color: #f5f5f3;
+$blue: #3bbfce;
+$margin: 16px;
+
+body {
+    background-color: $background-color;
+    color: $blue;
+}
+
+.content-navigation {
+    border-color: $blue;
+    color: darken($color: $blue, $amount: 10%); 
+}
+
+.border {
+    padding: $margin / 2;
+    margin: $margin / 2;
+    border-color: $blue;
+}
+
+.content-navigation {
+    color: black;
+}
