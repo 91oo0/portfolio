@@ -1,18 +1,28 @@
-$background-color: #dddddd;
+/* A Modern CSS Reset */
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+$background-color: #333;
 $blue: #3bbfce;
 $margin: 16px;
 
 @font-face {
     font-family: PixelMplus12-Bold;
-    src: url('../../resource/fonts/PixelMplus12-Bold.ttf') format('truetype');
+    src: url("../../resource/fonts/PixelMplus12-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: PixelMplus12-Regular;
-    src: url('../../resource/fonts/PixelMplus12-Regular.ttf') format('truetype');
+    src: url("../../resource/fonts/PixelMplus12-Regular.ttf") format("truetype");
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: $background-color;
     color: $blue;
     font-family: 'PixelMplus12-Regular';
@@ -24,7 +34,7 @@ body {
 }
 
 .border {
-    padding: $margin / 2;
+    // padding: $margin / 2;
     margin: $margin / 2;
     border-color: $blue;
 }
@@ -33,19 +43,33 @@ body {
     color: black;
 }
 
-.center-wrapper {
-    background-color: #fff;
+.video-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.5;
+}
 
+.movie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.center-wrapper {
+    background-color: rgba(51, 51, 51, 0.98);
     margin: auto;
     position: absolute;
-
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
-    width: 60%;
-    height: 600px;
+    width: 60vw;
+    height: 60vh;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
@@ -56,16 +80,20 @@ body {
     border: solid 1px $blue 1;
     text-align: center;
 
-
-    .image-icon {
-        width: 25%;
+    #icon-wrapper {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
         margin-top: -10%;
-        margin-bottom: 60px;
+    }
+    .image-icon {
+        margin: 0 auto;
+        width: 35%;
         border-radius: 50%;
     }
 
     ul {
-        margin-top: 150px;
+        width: 100%;
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -73,34 +101,54 @@ body {
     }
 
     li {
-        padding: 10px 30px;
-        margin: 10px;
-        height: 20px;
+        width: 15%;
         font-size: 1.5rem;
+        border-bottom: solid 1px $blue;
+        margin: 1%;
     }
 
     a {
         color: $blue;
+        text-decoration: none;
     }
 }
 
-// レスポンシブ記述
+.introduction-wrapper {
+    padding-top: 1.5%;
+    padding-bottom: 5%;
+    width: 100%;
+}
+
 @media screen and (max-width: 480px) {
     .center-wrapper {
+        background-color: rgba(51, 51, 51, 1);
+        margin-top: 60%;
         width: 100%;
         height: 100%;
     }
 
-    #icon-wrapper {
-     width: 100%;
-     height: 200px;
-     background-color: orange;
-    }
-
     .container {
+
+        margin: 0 auto;
+        #icon-wrapper {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            margin-top: -40%;
+            background-color: rgba(17, 17, 26, 0);
+        }
         .image-icon {
             width: 65%;
-            margin-top: 10%;
+        }
+
+        ul {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        li {
+            width: 25%;
         }
     }
 }
+/*# sourceMappingURL=test.css.map */
