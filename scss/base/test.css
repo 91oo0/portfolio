@@ -69,7 +69,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #333;
-  color: #3bbfce;
+  color: #fff;
   font-family: 'PixelMplus12-Regular';
 }
 
@@ -140,31 +140,15 @@ body {
   border-radius: 50%;
 }
 
-.container ul {
-  width: 100%;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.container li {
-  width: 15%;
-  font-size: 1.5rem;
-  border-bottom: solid 1px #3bbfce;
-  margin: 1%;
-}
-
-.container a {
-  color: #3bbfce;
+.container .button a {
+  color: #fff;
   text-decoration: none;
+  border: solid 2px #fff;
+  padding: 2% 5%;
+}
+
+.container .button :hover {
+  opacity: 0.6;
 }
 
 .introduction-wrapper {
@@ -174,6 +158,42 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    cursor: pointer;
+  }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: 20px;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
   .center-wrapper {
     background-color: #333333;
     margin-top: 60%;
@@ -192,6 +212,13 @@ body {
   }
   .container .image-icon {
     width: 65%;
+  }
+  .container .button {
+    margin-top: 25%;
+  }
+  .container .button a {
+    padding: 5% 10%;
+    border-radius: 30px;
   }
   .container ul {
     width: 100%;
