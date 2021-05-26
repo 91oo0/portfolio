@@ -158,42 +158,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .menu-trigger,
-  .menu-trigger span {
-    display: inline-block;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .menu-trigger {
-    position: relative;
-    width: 50px;
-    height: 44px;
-    background: none;
-    border: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    cursor: pointer;
-  }
-  .menu-trigger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 4px;
-  }
-  .menu-trigger span:nth-of-type(1) {
-    top: 0;
-  }
-  .menu-trigger span:nth-of-type(2) {
-    top: 20px;
-  }
-  .menu-trigger span:nth-of-type(3) {
-    bottom: 0;
-  }
   .center-wrapper {
     background-color: #333333;
     margin-top: 60%;
@@ -211,7 +175,7 @@ body {
     background-color: rgba(17, 17, 26, 0);
   }
   .container .image-icon {
-    width: 65%;
+    width: 55%;
   }
   .container .button {
     margin-top: 25%;
@@ -226,6 +190,22 @@ body {
   }
   .container li {
     width: 25%;
+  }
+  .list-center-wrapper {
+    background-color: rgba(51, 51, 51, 0.95);
+    width: 100%;
+    height: 100%;
+  }
+  .list-center-wrapper .list-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .list-center-wrapper .list-container .header-span-wrapper {
+    width: 100%;
+  }
+  .list-center-wrapper .list-container .header-span-wrapper span {
+    color: #fff;
   }
 }
 /*# sourceMappingURL=test.css.map */
