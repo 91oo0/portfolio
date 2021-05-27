@@ -116,9 +116,9 @@ body {
 @media screen and (max-width: 480px) {
     .center-wrapper {
         background-color: rgba(51, 51, 51, 1);
-        margin-top: 60%;
+        margin-bottom: 0;
         width: 100%;
-        height: 100%;
+        height: 80vh;
     }
 
     .container {
@@ -127,11 +127,11 @@ body {
             width: 100%;
             height: auto;
             margin: 0 auto;
-            margin-top: -40%;
+            margin-top: -20%;
             background-color: rgba(17, 17, 26, 0);
         }
         .image-icon {
-            width: 55%;
+            width: 60%;
         }
 
         .button {
